@@ -1,0 +1,21 @@
+body { background-color: beige; color: black; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+.header {
+    font-weight: bolder;
+    font-size: 50px;
+    text-align: center;
+    top: 5px;
+    right: 5px;
+    left: 5px;
+    height: 60px;
+    z-index: 2;
+    border-bottom: 1px #555555;}
+}
+
+.beginlist {
+    font-style: italic;
+}
+.center {text-align: center;}
+.myul {text-decoration: none; font-style: normal}
+.image {
+    left: 900px;
+}

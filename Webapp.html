@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrity Look Alike</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #joke-output {
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Celebrity Look Alike Test</h1>
+        <button id="joke-button">Who do you look like?</button>
+        <p id="joke-output">Click the button to see who you look like!</p>
+    </div>
+
+    <script>
+        document.getElementById('joke-button').addEventListener('click', function() {
+            displayRandomJoke();
+        });
+
+        const jokesList = [
+            {
+                setup: "Scanning your brain...",
+                punchline: "You look like Joe Biden!"
+            },
+            {
+                setup: "Searching your socials...",
+                punchline: "You look like Scarlet Johansson!"
+            },
+            {
+                setup: "Scanning last eaten meal...",
+                punchline: "You look like Caseoh!"
+            },
+            {
+                setup: "Finding your BYU grades...",
+                punchline: "You look like Beetlejuice!"
+            },
+            {
+                setup: "Running DNA tests...",
+                punchline: "You look like LeBron James!"
+            },
+            {
+                setup: "Testing radiation levels...",
+                punchline: "You look like Pedro Pascal!"
+            },
+            {
+                setup: "Calculating gravitaional forces...",
+                punchline: "You look Kim Karadshian!"
+            },
+            {
+                setup: "Guessing...",
+                punchline: "You look like Brad Pitt!"
+            }
+        ];
+
+        function displayRandomJoke() {
+            const randomIndex = Math.floor(Math.random() * jokesList.length);
+            const joke = jokesList[randomIndex];
+            document.getElementById('joke-output').innerHTML = `${joke.setup} <br><strong>${joke.punchline}</strong>`;
+        }
+    </script>
+</body>
+</html>
